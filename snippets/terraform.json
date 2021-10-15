@@ -1,0 +1,31 @@
+{
+  "module": {
+    "prefix": "mod",
+    "body": [
+      "module \"${1:module_name}\" {",
+      "  source  = \"${2:source}\"",
+      "  version = \"${3:version}\"",
+      "}"
+    ],
+    "description": "Use module"
+  },
+  "resource": {
+    "prefix": "res",
+    "body": [
+      "module \"${1:resource}\" \"${$2:name}\" {",
+      "}"
+    ],
+    "description": "Use resource"
+  },
+  "variable": {
+    "prefix": "var",
+    "body": [
+      "variable \"${1:var_name}\" {",
+      "  description = \"${2:description}\"",
+      "  type        = ${3:string}",
+      "  default     = \"${4:default_value}\"",
+      "}"
+    ],
+    "description": "Declare variable"
+  }
+}
